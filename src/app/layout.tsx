@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const TopNav = () => {
   return (
-    <div className="flex items-center justify-between border-b-black">
+    <div className="flex items-center justify-between border-b border-black">
       <h1 className="p-4 text-3xl">T3 Gallery</h1>
       <p>SignIn</p>
     </div>
@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body className="p-4">
         <TopNav />
-        {children}
+        <div className="p-4">{children}</div>
       </body>
     </html>
   );
