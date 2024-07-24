@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 const TopNav = () => {
   return (
-    <div className="flex items-center justify-between border-b border-black">
-      <h1 className="p-4 text-3xl">T3 Gallery</h1>
-      <p>SignIn</p>
+    <div className="flex items-center justify-between border-b border-black p-4">
+      <h1 className="text-3xl">T3 Gallery</h1>
+      <p className="text-3xl">SignIn</p>
     </div>
   );
 };
