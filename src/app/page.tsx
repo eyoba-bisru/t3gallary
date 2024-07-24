@@ -1,9 +1,11 @@
 import { db } from "@/server/db";
+import { image } from "@/server/db/schema";
+import { desc } from "drizzle-orm";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  const images = await db.query.images.findMany();
+  const images = await db.select().from(image).orderBy(desc(image.id));
 
   return (
     <main>

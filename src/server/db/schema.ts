@@ -3,7 +3,6 @@
 
 import { sql } from "drizzle-orm";
 import {
-  index,
   pgTableCreator,
   serial,
   timestamp,
@@ -18,7 +17,7 @@ import {
  */
 export const createTable = pgTableCreator((name) => `t3gallery_${name}`);
 
-export const images = createTable("image", {
+export const image = createTable("image", {
   id: serial("id").primaryKey(),
   name: varchar("name", { length: 256 }).notNull(),
   url: varchar("url", { length: 1024 }).notNull(),
